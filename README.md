@@ -4,7 +4,7 @@ React를 활용한 미니프로젝트입니다. <br />
 ## PROJECT 소개
 - 👩‍💻 투입인원 : 1명 (개인프로젝트)
 - 🔗 프로젝트URL : https://mbtilol.netlify.app/
-- 🔨 스킬 및 사용 TOOL : `yarn` `react` `styled-components` `swiper`
+- 🔨 스킬 및 사용 TOOL : `react` `styled-components` `swiper`
 ```
  "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
