@@ -1,0 +1,60 @@
+#root { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: var(--bs-font-monospace);
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 32vw;
+  height: 48vh;
+}
+.swiper-button-next:after, 
+.swiper-button-prev:after{
+  color: teal;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+}
+.swiper-pagination-bullet-active{
+  background: teal;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction{
+  bottom: 0px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: inherit;
+  border-radius: 16px;
+}
+
+@media all and (max-width: 450px) {
+  .swiper-container {
+    width: 72vw;
+    height: fit-content;
+  } 
+
+  .swiper-slide img {
+    height: 100%;
+  }
+
+}
