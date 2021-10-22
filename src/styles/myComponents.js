@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
-export const Title = styled.div`
-  min-height: 150px;
-`;
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 16px;
+  overflow: auto;
 
-export const Button = styled.button`
-  width: 160px;
-  height: 56px;
-  font-size: 18px;
-  border-radius: 16px;
-  border: none;
-  color: white;
-  background-color: rgb(34 70 86);
-  margin: 16px;
+  p, h3 {
+    margin: 0;
+  }
 `;
 
 export const ButtonQuestion = styled.button`

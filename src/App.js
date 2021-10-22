@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
-import Home from './Home';
-import MBTI from './MBTI';
+import Home from './components/Home';
+import MBTI from './components/MBTI';
 import './App.css';
-
-const wrapper = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-  textAlign: 'center',
-  height: '100vh',
-};
 
 function App() {
   // MBTI 시작여부 관리
@@ -19,7 +10,7 @@ function App() {
   const gameEnd = () => setBegin(false);
 
   return (
-  <div style={wrapper}>
+  <div className="app-container-wrapper">
   { 
     begin 
     ? <MBTI gameEnd={gameEnd} /> 

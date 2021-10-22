@@ -1,0 +1,17 @@
+.question-wrapper {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 16px;
+}
+
+.question-wrapper h2 {
+  font-family: var(--bs-font-sans-serif);
+  margin-top: revert;
+}
+
+.button-wrapper{
+  height: fit-content;
+}

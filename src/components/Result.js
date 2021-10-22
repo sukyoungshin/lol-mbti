@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Title } from './styles/myComponents';
-import { resultcontent } from './utilities/resultcontent';
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper React components
-import "./result.css";
+import { Wrapper } from '../styles/myComponents';
+import { resultcontent } from '../utilities/resultcontent';
+import "./Result.css";
+import { Swiper, SwiperSlide } from "swiper/react"; //
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css";
@@ -28,30 +28,37 @@ function Result({points, gameEnd}) {
     const MBTI = resultcontent.filter(content => content.mbti === result);
     setCharacter(MBTI[0]);
     
-  }, [myCharacter]); // 1번만 실행
+  }, [myCharacter, points]); // 1번만 실행
 
   return (
-    <>
-      <Title>
-        <p style={{margin: 16}}>당신의 성향과 찰떡인 LOL 챔피언은...</p>
+      <Wrapper>
+        <h2 style={{ fontSize: 14}}>당신의 성향과 찰떡인 LOL 챔피언은...</h2>
         <h2>"{myCharacter.mbti} {myCharacter.character}"입니다!</h2>
         <img src={myCharacter.characterImage} alt={myCharacter.character} style={{borderRadius: 16}} />
-        <p style={{fontSize: 14, marginTop: 8, marginBottom: 32, maxWidth: 500}}>{myCharacter.description}</p>
+        <p style={{fontSize: 14, maxWidth: 500}}>{myCharacter.description}</p>
         <h3>비슷한 유형의 다른 캐릭터 :</h3>
 
         {/* Swiper 슬라이더 */}
-        <Swiper spaceBetween={30} effect={'fade'} navigation={true} pagination={{"clickable": true}} className="mySwiper">
+        <Swiper 
+          spaceBetween={30} 
+          effect={'fade'} 
+          navigation={true} 
+          pagination={{"clickable": true}} 
+          className="mySwiper"
+        >
         {/*  myCharacter.similarCharacterImages 값이 들어있을때만 실행되도록 설정  */}
-        {
-          myCharacter.similarCharacterImages && myCharacter.similarCharacterImages.map(
-            (champs, index) => <SwiperSlide key={index}><img src={champs} alt="비슷한 유형의 다른 캐릭터들" /></SwiperSlide>
-          )
-        }
+          {
+            myCharacter.similarCharacterImages && myCharacter.similarCharacterImages.map(
+              (champs, index) => (
+                <SwiperSlide key={index}>
+                  <img src={champs} alt="비슷한 유형의 다른 캐릭터들" />
+                </SwiperSlide>
+              )
+            )
+          }
         </Swiper>
-
-      </Title>
-      <Button onClick={gameEnd}>다시하기</Button>
-    </>
+        <button className="btn-restart" type="button" onClick={gameEnd}>다시하기</button>
+      </Wrapper>
   );
 }
 

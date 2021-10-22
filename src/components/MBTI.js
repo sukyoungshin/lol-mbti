@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Question from './Question';
 import Result from './Result';
+import Question from './Question';
+import './MBTI.css';
 
-function MBTI({gameEnd}) {
+function MBTI({ gameEnd }) {
   // 답변을 끝난 문항 수
   const [ count, setCount ] = useState(0); 
 
@@ -32,7 +33,7 @@ function MBTI({gameEnd}) {
   };
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div className="mbti-wrapper">
     { 
       count === 12 
       ? <Result gameEnd={gameEnd} points={{e, s, t, j}} /> 
