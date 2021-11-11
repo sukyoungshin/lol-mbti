@@ -4,9 +4,8 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 ## PROJECT 소개
 👩‍💻 투입인원 : 1명 (개인 작업) <br/>
 🔗 배포URL : https://mbtilol.netlify.app/<br/>
-⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
 🔨 스킬 및 사용 TOOL : `react` `styled-components` `swiper` <br/>
-
+⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
 ### Dependencies
 ```
  "dependencies": {
