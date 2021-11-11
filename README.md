@@ -1,10 +1,13 @@
-# 나와 성향이 찰떡인 LOL챔피언은? (MBTI)
-React를 활용한 미니프로젝트입니다. <br />
+# 나와 성향이 찰떡인 LOL챔피언은?
+React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 
 ## PROJECT 소개
-- 👩‍💻 투입인원 : 1명 (개인프로젝트)
-- 🔗 프로젝트URL : https://mbtilol.netlify.app/
-- 🔨 스킬 및 사용 TOOL : `react` `styled-components` `swiper`
+👩‍💻 투입인원 : 1명 (개인 작업) <br/>
+🔗 배포URL : https://mbtilol.netlify.app/<br/>
+⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
+🔨 스킬 및 사용 TOOL : `react` `styled-components` `swiper` <br/>
+
+### Dependencies
 ```
  "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -18,7 +21,7 @@ React를 활용한 미니프로젝트입니다. <br />
     "web-vitals": "^1.0.1"
   }
   ```
-- ⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/><br>
+
  
 ## 📒 저작권 관련
 - 저작권관련<br/>
