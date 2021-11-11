@@ -11,11 +11,12 @@ function App() {
 
   return (
   <div className="app-container-wrapper">
-  { 
-    begin 
-    ? <MBTI gameEnd={gameEnd} /> 
-    : <Home gameStart={gameStart} /> 
-  }
+    {/* mbti 게임시작여부에 따라 보여줄 화면 */}
+    { 
+      begin 
+      ? <MBTI gameEnd={gameEnd} /> 
+      : <Home gameStart={gameStart} /> 
+    }
   </div>
   );
 }
