@@ -6,7 +6,7 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 
 👩‍💻 투입인원 : 1명 (개인 작업) <br/>
 🔗 배포URL : https://mbtilol.netlify.app/<br/>
-🔨 스킬 및 사용 TOOL : `react` `styled-components` `swiper` <br/>
+🔨 스킬 및 사용 TOOL : `react` `styled-components` <br/>
 ⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
 
 ### Dependencies
