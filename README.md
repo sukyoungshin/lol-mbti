@@ -21,30 +21,15 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
   "react-dom": "^17.0.2",
   "react-scripts": "4.0.3",
   "styled-components": "^5.3.1",
-  "swiper": "^7.2.0",
   "web-vitals": "^1.0.1"
 },
 ```
 
 ## 기능
 
+- 페이지 이동 및 props 전달
 - 현재 url 클립보드로 복사하기 기능
-
-<br/><br/>
-
-## 삽질 및 해결노트
-
-### ❌ ISSUE
-
-- swiper 최신 버전을 설치했을 때 swiper 모듈을 찾을 수 없는 에러가 나타났다.
-
-### 🧐 시도해본 방법
-
-- 찾아보니 [ESM packages를 번들러가 지원하지 않아서 생기는 문제](https://github.com/nolimits4web/swiper/issues/4871)였다. 따라서 최신버전이 아닌 이전 버전인 6버전으로 낮춰서 설치하여 진행했다. ⭕
-
-### 💡 결론
-
-- `버전체크`와 `공식문서` 크로스체킹은 필수 <br/><br/>
+<br/>
 
 ## 소스 출처
 
