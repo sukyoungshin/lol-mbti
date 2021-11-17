@@ -15,19 +15,19 @@ export const Wrapper = styled.div`
 `;
 
 export const ButtonQuestion = styled.button`
-  width: 100%;
-  height: 48px;
+  width: calc(100% / 2);
+  min-height: 48px;
   padding: 8px 16px;
   border: none;
-  border-radius: 8px;
+  
   color: white;
-  background-color: rgb(34 70 86);
   font-size: 16px;
-  margin-bottom: 16px;
-  box-shadow: 1px 1px 4px rgba(0 0 0 / 60%);
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.6);
 
   @media all and (max-width: 450px) {
-    height: 96px;
+    min-height: 96px;
+    height: fit-content;
     font-size: 14px;
   }
 `;
