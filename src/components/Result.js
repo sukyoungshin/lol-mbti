@@ -31,7 +31,7 @@ function Result({points, gameEnd}) {
     }
   };
 
-  console.log(navigator.clipboard);
+  const { mbti, character, characterImage, description, similarCharacters, similarCharacterImages } = myCharacter; // destructuring
 
   return (
       <div className="mbti-entire-result-wrapper">
@@ -39,12 +39,12 @@ function Result({points, gameEnd}) {
         {/* mbti 결과 */}
         <h2>✨ 당신의 성향과 찰떡인 LOL 챔피언은... ✨</h2>
         <div className="mbti-result-wrapper">
-          <h2>{myCharacter.mbti} : {myCharacter.character}</h2>
+          <h2>{mbti} : {character}</h2>
           <img 
-            src={myCharacter.characterImage} 
-            alt={myCharacter.character} 
+            src={characterImage} 
+            alt={similarCharacters} 
           />
-          <p>{myCharacter.description}</p>
+          <p>{description}</p>
         </div>
 
         {/* 비슷한 유형의 다른 캐릭터 추천 */}
@@ -52,20 +52,17 @@ function Result({points, gameEnd}) {
           <h3>👇 비슷한 유형의 다른 캐릭터 👇</h3>
           <div className="mbti-recommend-wrapper">
             {/*  myCharacter.similarCharacterImages 값이 들어있을때만 실행되도록 설정  */}
-              {
-                myCharacter.similarCharacterImages && myCharacter.similarCharacterImages.map(
-                  (champs, index) => (
+              { similarCharacterImages && similarCharacterImages.map((champ, index) => (
                     <div key={index} className="mbti-recommend">
                       <img 
-                        src={champs} 
-                        alt="비슷한 유형의 다른 캐릭터들"
+                        src={champ} 
+                        alt="비슷한 유형의 다른 캐릭터"
                       />
                     </div>
-                  )
-                )
-              }
+              ))}
           </div>
         </div> 
+
         {/* 링크 공유하기 */}
         <div className="btn-share-wrapper">
           <input 
@@ -82,6 +79,7 @@ function Result({points, gameEnd}) {
           { copySuccess ? 'Copied!' : 'Url복사' }
           </button>
         </div>
+
         {/* mbti 처음부터 다시하기 */}
         <div className="btn-restart-wrapper">
           <button 

@@ -1,9 +1,9 @@
+/* css reset */
 *, 
 *::before, 
 *::after {
   box-sizing: border-box;
 }
-
 html, 
 body{
   padding: 0;
@@ -11,27 +11,36 @@ body{
   width: 100%;
   height: 100%;
 }
-
-body {
-  padding: 0 8px;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
 
+/* container */
 .app-container-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .footer{
   width: 100%;
+  min-height: 32px;
   font-size: 12px;
   text-align: center;
-  max-width: 750px;
+  max-width: 800px;
   word-break: break-all;
 
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* desktop */
+@media all and (min-width: 415px) {
+  .home-wrapper {
+    margin: 0 auto;
+    width: 800px;
+  }
 }
