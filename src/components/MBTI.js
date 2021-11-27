@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
+// STYLE
+import styled from 'styled-components';
+// COMPONENT
 import Result from './Result';
 import Question from './Question';
-import './MBTI.css';
 
-function MBTI({ gameEnd }) {
+// STYLE
+const MbtiWrapper = styled.main`
+  padding: 16px;
+  width: 100vw;
+  min-height: calc(100vh - 56px);
+`;
+
+// COMPONENT
+const MBTI = ({ gameEnd }) => {
   // 답변을 끝난 문항 수
   const [ count, setCount ] = useState(0); 
-
   // 각 유형에 대한 점수들 (1번 답변은 +, 2번 답변은 -)
   const [ e, setE ] = useState(0);
   const [ s, setS ] = useState(0);
@@ -15,15 +24,14 @@ function MBTI({ gameEnd }) {
 
   // 답변을 끝낼 때, 카운트 증가 + 점수 합산
   const selectAnswer = (btnNum, type) => {
-
-    // 조건 : 1번 문항을 선택하면 +1
     if (btnNum === 1) {
+      // 조건 : 1번 문항을 선택하면 +1
       if (type === 'e') { setE(e + 1) }
       if (type === 's') { setS(s + 1) }
       if (type === 't') { setT(t + 1) }
       if (type === 'j') { setJ(j + 1) }
-    // 조건 : 2번 문항을 선택하면 -1
     } else {
+      // 조건 : 2번 문항을 선택하면 -1
       if (type === 'e') { setE(e - 1) }
       if (type === 's') { setS(s - 1) }
       if (type === 't') { setT(t - 1) }
@@ -33,13 +41,13 @@ function MBTI({ gameEnd }) {
   };
 
   return (
-    <div className="mbti-wrapper">
+    <MbtiWrapper>
     { 
       count === 12 
       ? <Result gameEnd={gameEnd} points={{e, s, t, j}} /> 
       : <Question count={count} selectAnswer={selectAnswer} /> 
     }
-    </div>
+    </MbtiWrapper>
   );
 };
 
