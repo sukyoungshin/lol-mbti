@@ -10,9 +10,10 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 ⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
 
 ### Features
-- 페이지 이동 및 props 전달
+
+- Styled-components 도입으로 CSS 의존성을 낮춤 (CSS in JS)
 - 현재 url 클립보드로 복사하기 기능
-- 반응형 작업 (미디어쿼리)
+- 반응형 작업 (mobile : ~450px, table, desktop)
 
 ### Dependencies
 
@@ -25,10 +26,12 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
   "react": "^17.0.2",
   "react-dom": "^17.0.2",
   "react-scripts": "4.0.3",
-  "styled-components": "^5.3.1",
+  "styled-components": "^5.3.3",
   "web-vitals": "^1.0.1"
 },
 ```
+
+### 프로젝트 회고
 
 > 🔗 [삽질노트](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md)
 
