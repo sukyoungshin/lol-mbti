@@ -36,7 +36,7 @@ const HomeSection = styled.section`
 export const MobileButton = styled.button`
   padding: 0px 16px;
   width: 100%;
-  height: 32px;
+  height: 42px;
 
   border: none;
   outline: none;
