@@ -4,38 +4,34 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 
 ## PROJECT 소개
 
-👩‍💻 투입인원 : 1명 (개인 작업) <br/>
-🔗 배포URL : [https://mbtilol.netlify.app/](https://mbtilol.netlify.app/)<br/>
-🔨 스킬 및 사용 TOOL : `react` `styled-components` <br/>
-⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
+- 투입인원 : 개인프로젝트 (1인)
+- 링크 : 🔗 [배포URL](https://mbtilol.netlify.app/)
 
 ### Features
-
 - Styled-components 도입으로 CSS 의존성을 낮춤 (CSS in JS)
 - 현재 url 클립보드로 복사하기 기능
-- 반응형 작업 (mobile : ~450px, table, desktop)
+- 반응형 작업 (mobile, table, desktop)
 
 ### Dependencies
+- ⚙ 패키지매니저 : `yarn install`
+- 🔨 Dependencies
+  ```
+  "dependencies": {
+    "@material/button": "^13.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.3",
+    "web-vitals": "^1.0.1"
+  },
+  ```
 
-```
-"dependencies": {
-  "@material/button": "^13.0.0",
-  "@testing-library/jest-dom": "^5.11.4",
-  "@testing-library/react": "^11.1.0",
-  "@testing-library/user-event": "^12.1.10",
-  "react": "^17.0.2",
-  "react-dom": "^17.0.2",
-  "react-scripts": "4.0.3",
-  "styled-components": "^5.3.3",
-  "web-vitals": "^1.0.1"
-},
-```
-
-### 프로젝트 회고
-
-[프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md)
-
-<br/>
+### Project 회고
+- [프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md) 
+<br/><br/>
 
 ## 소스 출처
 
