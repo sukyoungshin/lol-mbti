@@ -5,7 +5,7 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 ## PROJECT 소개
 
 👩‍💻 투입인원 : 1명 (개인 작업) <br/>
-🔗 배포URL : https://mbtilol.netlify.app/<br/>
+🔗 배포URL : [https://mbtilol.netlify.app/](https://mbtilol.netlify.app/)<br/>
 🔨 스킬 및 사용 TOOL : `react` `styled-components` <br/>
 ⚙ 설치 및 실행 : `yarn install`, `yarn start`<br/>
 
@@ -33,7 +33,7 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 
 ### 프로젝트 회고
 
-> [프로젝트 진행 시 겪었던 이슈](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md)
+- [프로젝트 진행 시 겪었던 이슈](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md)
 
 <br/>
 
