@@ -14,8 +14,9 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 
 ### Dependencies
 - ⚙ 패키지매니저 : `yarn install`
-- 🔨 Dependencies
-  ```
+- 🔨 Dependencies : `react`, `styled-components`
+
+```
   "dependencies": {
     "@material/button": "^13.0.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -28,6 +29,7 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
     "web-vitals": "^1.0.1"
   },
   ```
+
 
 ### Project 회고
 [프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md) 
