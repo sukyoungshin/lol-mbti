@@ -5,7 +5,7 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 ## PROJECT 소개
 
 - 투입인원 : 개인프로젝트 (1인)
-- 링크 : 🔗 [배포URL](https://mbtilol.netlify.app/)
+- 배포링크 : 🔗[롤mbti](https://mbtilol.netlify.app/)
 
 ### Features
 - Styled-components 도입으로 CSS 의존성을 낮춤 (CSS in JS)
