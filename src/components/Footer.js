@@ -1,17 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const FWrapper = styled.footer`
-  padding: 8px 16px;
-  width: 100%;
-  height: 56px;
-
-  address {
-    color: var(--color-black);
-    font-size: var(--font-size-small);
-    word-break: break-all;
-  }
-`;
+import { FWrapper } from './common/Styled';
 
 const Footer = () => {
   return (

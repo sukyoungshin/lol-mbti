@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
-// STYLE
-import styled from 'styled-components';
 // COMPONENT
 import Result from './Result';
 import Question from './Question';
+import { MbtiWrapper } from './common/Styled';
 
-// STYLE
-const MbtiWrapper = styled.main`
-  padding: 16px;
-  width: 100vw;
-  min-height: calc(100vh - 56px);
-`;
-
-// COMPONENT
 const MBTI = ({ gameEnd }) => {
   // 답변을 끝난 문항 수
   const [ count, setCount ] = useState(0); 
