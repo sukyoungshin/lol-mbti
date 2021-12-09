@@ -5,16 +5,17 @@ React를 활용하여 작업한 MBTI 미니 프로젝트입니다. <br /><br />
 ## PROJECT 소개
 
 - 투입인원 : 개인프로젝트 (1인)
-- 배포링크 : 🔗[롤mbti](https://mbtilol.netlify.app/)
+- 배포링크 : 🔗[롤MBTI](https://mbtilol.netlify.app/)
 
 ### Features
 - Styled-components 도입으로 CSS 의존성을 낮춤 (CSS in JS)
 - 현재 url 클립보드로 복사하기 기능
 - 반응형 작업 (mobile, table, desktop)
 
-### Dependencies
-- ⚙ 패키지매니저 : `yarn install`
-- 🔨 Dependencies : `react`, `styled-components`
+### Doc
+- `yarn install`
+- node -v : 17.1.0
+- tool : `react`, `styled-components`
 
 ```
   "dependencies": {
