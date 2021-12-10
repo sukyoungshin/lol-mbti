@@ -14,46 +14,50 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
+  #root {
+    height: 100%;
+  }
   p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
   }
+  input, button {
+    border: none;
+    outline: none;
+  }
+
+  /* BACKGROUND-COLOR */
   body {
     background-color: var(--color-bgcolor);    
   }
-  #root {
-    height: 100%;
-  }
-
   /* FONT-FAMILY */
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
-  
-  /* FONT SIZE */
+  /* FONT-SIZE & COLOR */
+  html {
+    --font-size-heading : 22px;
+    --font-size-main : 16px;
+    --font-size-medium : 14px;
+    --font-size-small: 12px;
+
+    --color-white: #ffffff;      
+    --color-bgcolor: #F5F5F5;
+    --color-light-grey: #F6F6F6;
+    --color-grey: #C5C5C5;
+    --color-black: #333333;
+
+    --color-black-opacity1: rgba(0,0,0,0.1);
+    --color-black-opacity4: rgba(0,0,0,0.4);
+  }
   // MOBILE
   @media all and (max-width: 450px) {
-    html {
-      --font-size-heading : 22px;
-      --font-size-main : 16px;
-      --font-size-medium : 14px;
-      --font-size-small: 10px;
-      --color-white: #fff;
-      --color-light-grey: #F6F6F6;
-      --color-grey: #C5C5C5;
-      --color-black: #111;
-      --color-bgcolor: #F5F5F5;
-    }
   }
   // TABLET
   // DESKTOP
@@ -95,12 +99,10 @@ export const HomeSection = styled.section`
   }
 `;
 export const MobileButton = styled.button`
+  margin: 16px 0 0 0;
   padding: 0px 16px;
   width: 100%;
   height: 42px;
-
-  border: none;
-  outline: none;
 
   color: var(--color-white);
   font-size: var(--font-size-medium);
@@ -135,6 +137,7 @@ export const QHeader = styled.header`
     font-size: var(--font-size-heading);
   }
 `;
+
 export const QSection = styled.section`
   width: 100%;
 
@@ -143,10 +146,8 @@ export const QSection = styled.section`
   grid-gap: 16px;
   gap: 16px;
 `;
-export const QButton = styled.button`
-  border: none;
-  outline: none;
 
+export const QButton = styled.button`
   padding: 8px 16px;
   width: 100%;
   min-height: 58px;
@@ -184,8 +185,8 @@ export const RSectionWrapper = styled.section`
     margin: 8px 0;
     width: 100%;
   }
-
 `;
+
 export const RArticle = styled.article`
   margin: 16px 0;
   padding: 16px 0;
@@ -199,7 +200,7 @@ export const URLWrapper = styled.article`
   border-bottom: 1px solid var(--color-black);
 `;
 export const URLshareWrapper = styled.div`
-  margin: 0 0 8px 0;
+  margin: 0 0 16px 0;
   width: 100%;
 
   display: inline-flex;
@@ -228,9 +229,6 @@ export const URLshareWrapper = styled.div`
 
   input[type="text"], 
   button[type="button"] {
-    border: none;
-    outline: none;  
-
     height: 32px;
   }
   button[type="button"] {
@@ -240,11 +238,11 @@ export const URLshareWrapper = styled.div`
     cursor: copy;
 
     transition: all 0.4s;
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 0 8px 8px 0;
+    background-color: var(--color-black-opacity1);
+    border-radius: 8px;
     
     &:hover, &:focus, &:active {
-      background-color: rgba(0,0,0,0.4);
+      background-color: var(--color-black-opacity4);
     }
   }
 
