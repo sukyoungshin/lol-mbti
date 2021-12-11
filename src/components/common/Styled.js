@@ -85,7 +85,7 @@ export const HomeSection = styled.section`
   margin: 56px 0 0 0;
   padding: 0px 16px;
   width: 100%;
-  min-height: calc(100% - 168px);
+  min-height: calc(100% - 176px);
 
   display: inline-flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ export const MobileButton = styled.button`
 export const MbtiWrapper = styled.main`
   padding: 16px;
   width: 100vw;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 64px);
 `;
 
 // Question
@@ -266,7 +266,7 @@ export const ImageList = styled.div`
 export const FWrapper = styled.footer`
   padding: 8px 16px;
   width: 100%;
-  height: 56px;
+  height: 64px;
 
   address {
     color: var(--color-black);
