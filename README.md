@@ -35,7 +35,7 @@ React를 활용하여 작업한 MBTI 프로젝트입니다. <br /><br />
 <br/>  
 
 ## 🔗프로젝트 관련 링크
-- [배포url](https://mbtilol.netlify.app/)
+- [프로젝트url](https://mbtilol.netlify.app/)
 - [프로젝트 진행하며 겪은 이슈정리](https://github.com/sukyoungshin/TIL/blob/main/Note/lol-mbti.md) 
 <br/>  
 
