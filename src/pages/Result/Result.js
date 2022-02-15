@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// RESULT data
-import { resultcontent } from '../utilities/resultcontent'; 
-// STYLED-COMPONENTS
-import { RSectionWrapper, RArticle, ImageWrapper, ImageList, URLWrapper, URLshareWrapper, MobileButton } from './common/Styled';
+import { resultcontent } from 'mock/resultcontent'; 
+import { StyledSection, StyledArticle, StyledDivImage, StyledDivImageList, StyledDivURL, StyledInput } from './Result.style';
+import { Button } from 'components';
 
 const Result = ({points, gameEnd}) => {
   // MBTI유형
@@ -33,9 +32,10 @@ const Result = ({points, gameEnd}) => {
       setCopySuccess(err);
     }
   };
+  const copyEventHandler = (currentURL) => copyToClipBoard(currentURL);
 
   return (
-      <RSectionWrapper>
+      <StyledSection>
         {/* mbti 결과 */}
         <h1>✨ 당신의 성향과 찰떡인 LOL 챔피언은... ✨</h1>
         <h2>{mbti} : {character}</h2>
@@ -46,11 +46,10 @@ const Result = ({points, gameEnd}) => {
         />
         <p>{description}</p>
 
-        {/* 비슷한 유형의 다른 캐릭터 추천 */}
-        <RArticle>
+        <StyledArticle>
           <h3>👇 비슷한 유형의 다른 캐릭터 👇</h3>
-          <ImageWrapper>
-            <ImageList>
+          <StyledDivImage>
+            <StyledDivImageList>
               {/*  myCharacter.similarCharacterImages 값이 들어있을때만 실행되도록 설정  */}
               { similarCharacterImages && similarCharacterImages.map((champ, index) => (
                   <img 
@@ -59,38 +58,29 @@ const Result = ({points, gameEnd}) => {
                     alt="비슷한 유형의 다른 캐릭터"
                   />
               ))}
-            </ImageList>
-          </ImageWrapper>
-        </RArticle> 
+            </StyledDivImageList>
+          </StyledDivImage>
+        </StyledArticle> 
 
-        {/* 링크 공유하기 */}
-        <URLWrapper>
+        <article>
           <h3>Copy URL</h3>
-          <URLshareWrapper>
-            <input 
+          <StyledDivURL>
+            <StyledInput 
               type="text" 
-              name="urlshare" 
               value={currentURL} 
               readOnly
             />
             <span>🔗</span>
-            <button 
-              type="button"
-              className="btn-copy"
-              onClick={(currentURL) => copyToClipBoard(currentURL)}
-            >
-            { copySuccess ? 'Copied!' : 'Url복사' }
-            </button>
-          </URLshareWrapper>
-        </URLWrapper>
+            <Button onClick={copyEventHandler} copy>
+              { copySuccess ? 'Copied!' : 'Url복사' }
+            </Button>
+          </StyledDivURL>
+        </article>
 
-        {/* mbti 처음부터 다시하기 */}
-        <MobileButton 
-          type="button" 
-          onClick={gameEnd}
-        >다시하기</MobileButton>
-
-      </RSectionWrapper>
+        <Button onClick={gameEnd}>
+          다시하기
+        </Button>
+      </StyledSection>
   );
 }
 

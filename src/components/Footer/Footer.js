@@ -1,14 +1,14 @@
 import React from 'react';
-import { FWrapper } from './common/Styled';
+import { StyledFooter } from './Footer.style';
 
 const Footer = () => {
   return (
-    <FWrapper>
+    <StyledFooter>
       <address>
         This is an individual project, which is not created for a commercial purpose. 
         &copy; All righs are reserved by Riot Games, Inc, as per the Riot's legal policy: https://www.riotgames.com/en/legal
       </address>
-    </FWrapper>
+    </StyledFooter>
   );
 };
 

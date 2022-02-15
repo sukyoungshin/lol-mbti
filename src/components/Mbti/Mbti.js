@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-// COMPONENT
-import Result from './Result';
-import Question from './Question';
-import { MbtiWrapper } from './common/Styled';
+import { Result, Question } from '../../pages';
+import { StyledMain } from './Mbti.style';
 
-const MBTI = ({ gameEnd }) => {
+const Mbti = ({ gameEnd }) => {
   // 답변을 끝난 문항 수
   const [ count, setCount ] = useState(0); 
   // 각 유형에 대한 점수들 (1번 답변은 +, 2번 답변은 -)
@@ -32,14 +30,14 @@ const MBTI = ({ gameEnd }) => {
   };
 
   return (
-    <MbtiWrapper>
+    <StyledMain>
     { 
       count === 12 
       ? <Result gameEnd={gameEnd} points={{e, s, t, j}} /> 
       : <Question count={count} selectAnswer={selectAnswer} /> 
     }
-    </MbtiWrapper>
+    </StyledMain>
   );
 };
 
-export default MBTI;
+export default Mbti;
