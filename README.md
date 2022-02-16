@@ -12,6 +12,7 @@ React를 활용하여 작업한 MBTI 프로젝트입니다. <br /><br />
 - styled-components를 도입하여 작업한 첫번째 SPA 프로젝트
 - useState()와 props를 활용하여 MBTI 테스트 구현
 - clipboard API를 활용하여 현재 페이지 링크 복사하기 기능 구현
+- 커스텀 훅을 활용하여 로직과 UI 분리
 - 반응형 작업 (모바일, 데스크탑)<br/><br/>
 
 ## Doc
