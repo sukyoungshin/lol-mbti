@@ -1,33 +1,10 @@
-import React, { useState } from 'react';
-import { Result, Question } from '../../pages';
+import React from 'react';
+import { Result, Question } from 'pages';
 import { StyledMain } from './Mbti.style';
+import { useCountMbti } from './hooks';
 
 const Mbti = ({ gameEnd }) => {
-  // 답변을 끝난 문항 수
-  const [ count, setCount ] = useState(0); 
-  // 각 유형에 대한 점수들 (1번 답변은 +, 2번 답변은 -)
-  const [ e, setE ] = useState(0);
-  const [ s, setS ] = useState(0);
-  const [ t, setT ] = useState(0);
-  const [ j, setJ ] = useState(0);
-
-  // 답변을 끝낼 때, 카운트 증가 + 점수 합산
-  const selectAnswer = (btnNum, type) => {
-    if (btnNum === 1) {
-      // 조건 : 1번 문항을 선택하면 +1
-      if (type === 'e') { setE(e + 1) }
-      if (type === 's') { setS(s + 1) }
-      if (type === 't') { setT(t + 1) }
-      if (type === 'j') { setJ(j + 1) }
-    } else {
-      // 조건 : 2번 문항을 선택하면 -1
-      if (type === 'e') { setE(e - 1) }
-      if (type === 's') { setS(s - 1) }
-      if (type === 't') { setT(t - 1) }
-      if (type === 'j') { setJ(j - 1) }
-    };
-    setCount(count + 1);
-  };
+  const {e, s, t, j, count, selectAnswer} = useCountMbti();
 
   return (
     <StyledMain>

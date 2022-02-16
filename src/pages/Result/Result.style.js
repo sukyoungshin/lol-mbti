@@ -21,11 +21,12 @@ export const StyledSection = styled.section`
   p {
     font-size: var(--font-size-medium);
   }
+`;
 
-  img.result{
-    margin: 8px 0;
-    width: 100%;
-  }
+export const StyledImg = styled.img`
+  margin: 8px 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 `;
 
 export const StyledArticle = styled.article`
